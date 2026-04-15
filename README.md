@@ -1,7 +1,7 @@
 # Connect for Health Colorado — Open Enrollment 2025
-## SQL + Power BI + Tableau Analytics Project
+## SQL Project
 
-A data analytics portfolio project built from the **Connect for Health Colorado 2025 Open Enrollment Report** ("By the Numbers"). This project transforms the PDF report's raw data into a relational database with analysis queries and two BI dashboards.
+A data analytics portfolio project built from the **Connect for Health Colorado 2025 Open Enrollment Report** ("By the Numbers"). This project transforms the PDF report's raw data into a relational database with analysis queries.
 
 ---
 
@@ -34,41 +34,7 @@ All county tables join on `county_name`. The `enrollments_by_county` table inclu
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- MySQL 8.0+ (or MariaDB 10.6+)
-- [Tableau Desktop](https://www.tableau.com/products/desktop) (free trial available)
-- [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free)
-- MySQL ODBC Driver (for Power BI connection)
-
-### 1 — Load the SQL Project
-
-```bash
-# Create the database and load all data
-mysql -u root -p < connect_for_health_co_2025.sql
-
-# Verify it loaded
-mysql -u root -p -e "USE connect_health_co_2025; SHOW TABLES;"
-```
-
-### 2 — Open in Tableau
-
-1. Open **Tableau Desktop**
-2. **File → Open** → select `connect_for_health_co_2025.twb`
-3. When prompted for a connection, enter your MySQL server credentials
-4. Worksheets and dashboards populate automatically
-
-### 3 — Open in Power BI
-
-1. Open **Power BI Desktop**
-2. **File → Import → Power BI template** → select `connect_for_health_co_2025_powerbi.pbit`
-3. Enter your MySQL server/database when prompted
-4. Apply the theme JSON (in the `.pbit` file under Section 6) via **View → Themes → Browse**
-
----
-
-## 🔍 Key Analysis Queries
+## Key Analysis Queries
 
 The SQL file includes 12 pre-built queries:
 
@@ -88,24 +54,7 @@ The SQL file includes 12 pre-built queries:
 | Q12 | Market-rate growth counties (100+ new) | High-income growth areas |
 
 ---
-
-## 📈 Dashboard Pages
-
-### Tableau (3 Dashboards)
-1. **Executive Summary** — KPI tiles, enrollment by county bar, age/customer type donut charts
-2. **Cost Analysis** — APTC scatter plot, assisted vs unassisted comparison, savings ranking
-3. **Growth & Expansion** — Top growth counties, new enrollment hotspots
-
-### Power BI (5 Report Pages)
-1. **Executive Summary** — Cards, top county bar, customer breakdowns
-2. **County Enrollment Map** — Filled Colorado map + growth table
-3. **Cost & Affordability** — Premium comparison scatter, APTC analysis
-4. **Growth & New Enrollments** — New enrollment bars + county map
-5. **Rural vs Urban Analysis** — Side-by-side comparisons, treemap
-
----
-
-## 📌 Key Findings from the Data
+## Key Findings from the Data
 
 - **296,449** Coloradans covered — a **19% increase** over prior year (5th consecutive record)
 - **80%** of customers received financial help averaging **$138/month** net premium
